@@ -1,0 +1,25 @@
+	Input
+	Store DIVIDENDO
+	Input
+	Store DIVISOR
+LACO, Load DIVIDENDO
+	Subt DIVISOR
+	SkipCond 000
+	Jump CONTINUA
+	Jump FIM
+CONTINUA, Store DIVIDENDO  
+	Load QUOC
+	Add UM
+	Store QUOC
+	Jump LACO
+FIM, Load QUOC
+	Output
+	Load DIVIDENDO
+	Output
+	Halt
+
+
+DIVIDENDO, DEC 0
+DIVISOR, DEC 0
+QUOC, DEC 0
+UM, DEC 1

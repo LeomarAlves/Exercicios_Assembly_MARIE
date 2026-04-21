@@ -1,0 +1,22 @@
+	Input
+	Store A
+	Input
+	Store B	
+LACO, Load B	
+	SkipCond 800
+	Jump FIM
+	Load RESULT
+	Add A
+	Store RESULT
+	Load B
+	Subt UM
+	Store B
+	Jump LACO
+FIM, Load RESULT
+	Output
+	Halt
+
+A, DEC 0
+B, DEC 0
+RESULT, DEC 0
+UM, DEC 1

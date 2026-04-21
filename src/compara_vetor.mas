@@ -1,0 +1,40 @@
+	Input 
+	Store TAM
+	Input
+	Store INI1
+	Input
+	Store INI2
+LACO, Load TAM
+	SkipCond 800
+	Jump IGUAL
+	LoadI INI1
+	Store AUX
+	LoadI INI2
+	Subt AUX
+	SkipCond 400
+	Jump DIFERENTE
+	Load TAM
+	Subt UM
+	Store TAM
+	Load INI1
+	Add UM
+	Store INI1
+	Load INI2
+	Add UM
+	Store INI2
+	Jump LACO
+IGUAL, Load UM
+	Output
+	Jump FIM
+DIFERENTE, Load ZERO
+	Output
+	Jump FIM
+FIM, Halt
+
+
+TAM, DEC 0
+INI1, DEC 0
+INI2, DEC 0
+UM, DEC 1
+ZERO, DEC 0
+AUX, DEC 0

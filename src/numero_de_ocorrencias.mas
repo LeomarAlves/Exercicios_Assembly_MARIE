@@ -1,0 +1,34 @@
+	Input 
+	Store VALOR
+	Input
+	Store TAM
+	Input
+	Store INI
+	Clear
+	Store CONT
+LACO, load TAM
+	SkipCond 800
+	Jump FIM
+	LoadI INI
+	Subt VALOR
+	SkipCond 400
+	Jump CONTINUA
+	Load CONT
+	Add UM
+	Store CONT
+CONTINUA, Load INI
+	Add UM
+	Store INI
+	Load TAM
+	Subt UM
+	Store TAM
+	Jump LACO
+FIM, Load CONT
+	Output
+	Halt
+
+VALOR, DEC 0
+TAM, DEC 0
+INI, DEC 0
+CONT, DEC 0
+UM, DEC 1
